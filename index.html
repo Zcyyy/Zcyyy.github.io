@@ -16,56 +16,58 @@ title: Home
     </div>
 </section>
 
+{% if page.url == "/" %}
 
-
-<!-- Posts Index
+<!-- Featured
 ================================================== -->
-<section class="recent-posts">
+<section class="featured-posts">
     <div class="section-title">
-        <h2><span>Study</span></h2>
-        <a class="more-link" href="{{ baseurl }}/category/Study">all</a>
+        <h2><span>Featured</span></h2>
     </div>
-    <div class="row listrecent">
-        {% for post in categories.Study limit:3 %}
-            {% include postbox.html %}
-        {% endfor %}
+    <div class="row">
+
+    {% for post in site.posts %}
+
+        {% if post.featured == true %}
+
+            {% include featuredbox.html %}
+
+        {% endif %}
+
+    {% endfor %}
+
     </div>
 </section>
 
-<!-- Posts Index
-================================================== -->
-<section class="recent-posts">
-    <div class="section-title">
-        <h2><span>Daily Life</span></h2>
-        <a class="more-link" href="{{ baseurl }}/category/Daily Life">all</a>
-    </div>
-    <div class="row listrecent">
-        {% for post in categories['Daily Life'] limit:3 %}
-            {% include postbox.html %}
-        {% endfor %}
-    </div>
-</section>
+{% endif %}
 
 <!-- Posts Index
 ================================================== -->
 <section class="recent-posts">
+
     <div class="section-title">
-        <h2><span>Journey</span></h2>
-        <a class="more-link" href="{{ baseurl }}/category/Journey">all</a>        
+
+        <h2><span>All Stories</span></h2>
+
     </div>
+
     <div class="row listrecent">
-        {% for post in categories.Journey limit:3 %}
-            {% include postbox.html %}
+
+        {% for post in paginator.posts %}
+
+        {% include postbox.html %}
+
         {% endfor %}
+
     </div>
+
 </section>
 
 <!-- Pagination
 ================================================== -->
-<!-- <div class="bottompagination">
+<div class="bottompagination">
 <div class="pointerup"><i class="fa fa-caret-up"></i></div>
 <span class="navigation" role="navigation">
     {% include pagination.html %}
 </span>
-</div> -->
-
+</div>
