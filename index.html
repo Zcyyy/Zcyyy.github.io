@@ -5,51 +5,95 @@ title: Home
 
 {% if page.url == "/" %}
 
-<!-- Featured
-================================================== -->
+<!-- 顶部置顶/最新区域 -->
 <section class="featured-posts">
     <div class="section-title">
-        <h2><span>Featured</span></h2>
+        <h2><span>最新</span></h2>
     </div>
     <div class="row">
+        {% for post in site.posts limit:4 %}
+            <div class="col-md-6 mb-30">
+                <div class="listfeaturedtag h-100">
+                    <div class="row h-100">
+                        <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
+                            <div class="h-100">
+                                <div class="thumbnail">
+                                    {% if post.image %}
+                                    <a href="{{ post.url | relative_url }}">
+                                        <img class="featured-box-img-cover" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-7">
+                            <div class="h-100 card-body">
+                                <h2 class="card-title">
+                                    <a class="text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                </h2>
+                                
+                                <h4 class="card-text">
+                                    {{ post.excerpt | strip_html | truncate: 100 }}
+                                </h4>
 
-    {% for post in posts %}
+                                <div class="metafooter">
+                                    <div class="wrapfooter">
+                                        <span class="author-meta">
+                                            <span class="post-date">{{ post.date | date_to_string }}</span>
+                                            <span class="dot"></span>
+                                            <span class="post-read">{{ post.content | reading_time }} 阅读</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 
-        {% if post.featured == true %}
+<!-- 学习板块 -->
+<section class="recent-posts">
+    <div class="section-title">
+        <h2><span>学习</span></h2>
+        <a class="more-link" href="{{ site.baseurl }}/category/学习">查看全部</a>
+    </div>
+    <div class="row listrecent">
+        {% for post in site.categories.学习 limit:3 %}
+            {% include postbox.html %}
+        {% endfor %}
+    </div>
+</section>
 
-            {% include featuredbox.html %}
+<!-- 日常板块 -->
+<section class="recent-posts">
+    <div class="section-title">
+        <h2><span>日常</span></h2>
+        <a class="more-link" href="{{ site.baseurl }}/category/日常">查看全部</a>
+    </div>
+    <div class="row listrecent">
+        {% for post in site.categories.日常 limit:3 %}
+            {% include postbox.html %}
+        {% endfor %}
+    </div>
+</section>
 
-        {% endif %}
-
-    {% endfor %}
-
+<!-- 旅行板块 -->
+<section class="recent-posts">
+    <div class="section-title">
+        <h2><span>旅行</span></h2>
+        <a class="more-link" href="{{ site.baseurl }}/category/旅行">查看全部</a>
+    </div>
+    <div class="row listrecent">
+        {% for post in site.categories.旅行 limit:3 %}
+            {% include postbox.html %}
+        {% endfor %}
     </div>
 </section>
 
 {% endif %}
-
-<!-- Posts Index
-================================================== -->
-<section class="recent-posts">
-
-    <div class="section-title">
-
-        <h2><span>All Stories</span></h2>
-
-    </div>
-
-    <div class="row listrecent">
-
-        {% for post in paginator.posts %}
-
-        {% include postbox.html %}
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
 <!-- Pagination
 ================================================== -->
 <div class="bottompagination">
