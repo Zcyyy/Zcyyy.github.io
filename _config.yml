@@ -1,11 +1,11 @@
 # Site
 name: "ZCY's Site"
 title: "Persional Life Recorder"
-description: "This is a persional site for ZCY, a student at Harbin Institute of Technology, Shenzhen. This site is used to record my life and study."
+description: "A persional site for ZCY, a student at Harbin Institute of Technology, Shenzhen. This site is used to record my life and study."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /Zcyyy.github.io
-url: https://Zcyyy.github.io
+baseurl: Zcyyy.github.io/
+url: https://Zcyyy.github.io/
 lang: en
 timezone: Asia/Shanghai
 google_analytics: 'UA-46278016-1'
