@@ -43,7 +43,7 @@ description: 旅行计划
 ---
 
 ## 路线
-![路线示意图](https://zcyyy.github.io/assets/images/route.jpg)
+![路线示意图](https://zcyyy.github.io/assets/images/route.jpg)  
 **上山:**
 - 路线1：红门游客中心->中天门->十八盘->南天门->玉皇顶（全程徒步）
   耗时：6小时（建议预留4-6小时）
@@ -63,11 +63,56 @@ description: 旅行计划
 - 天文通看天气预报
 
 **观景精华**
-- ​![​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。](https://zcyyy.github.io/assets/images/cloud.jpg)
-- ![​玉皇顶：​​ 泰山极顶，标志性打卡地。](https://zcyyy.github.io/assets/images/temple.jpg)
-- ![​日落：​​ 若天气好且时间充裕，在山顶看日落非常壮美。](https://zcyyy.github.io/assets/images/sun.jpg)
-- ![ ](https://zcyyy.github.io/assets/images/picture1.jpg) ![​岱庙宋天贶殿壁画：​​ 镇馆之宝，中国古代壁画杰作！​](https://zcyyy.github.io/assets/images/picture2.jpg)
+<style>
+  .image-item {
+    width: 300px; /* 固定宽度 */
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+  }
+  .image-item img {
+    width: auto; /* 宽度自适应容器 */
+    height: 100%; /* 高度保持比例 */
+    object-fit: cover; /* 保持比例填充容器 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .image-title {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  .rotate-first {
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+</style>
 
+<div class="image-container">
+  <div class="image-item">
+    <img src="https://zcyyy.github.io/assets/images/cloud.jpg" alt="​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。">
+    <div class="image-title">图一：​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。</div>
+  </div>
+
+  <div class="image-item">
+    <img src="https://zcyyy.github.io/assets/images/temple.jpg" alt="泰山玉皇顶">
+    <div class="image-title">图二：​玉皇顶：​​ 泰山极顶，标志性打卡地。</div>
+  </div>
+
+  <div class="image-item">
+    <img src="https://zcyyy.github.io/assets/images/sun.jpg" alt="泰山日落">
+    <div class="image-title">图三：​日落：​​ 若天气好且时间充裕，在山顶看日落非常壮美。</div>
+  </div>
+
+  <div class="image-item">
+    <img src="https://zcyyy.github.io/assets/images/picture1.jpg" alt="泰山风景">
+    <div class="image-title"></div>
+  </div>
+
+  <div class="image-item">
+    <img src="https://zcyyy.github.io/assets/images/picture2.jpg" alt="岱庙壁画">
+    <div class="image-title">图四：岱庙宋天贶殿壁画</div>
+  </div>
+</div>
 ## 美食
 - 糁（san）汤
 - 三东炒鸡（推荐：山东炒鸡，黄瓜拌油条？，风味茄子等）
