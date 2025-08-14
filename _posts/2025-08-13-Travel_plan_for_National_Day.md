@@ -78,6 +78,14 @@ description: 旅行计划
 - 打车
 
 ## 住宿
+<style>
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 ### 民宿类：  
 
 | 名称                  | 地址                 | 价位      | 优点                                                         | 缺点                              | 图片                                                  |
