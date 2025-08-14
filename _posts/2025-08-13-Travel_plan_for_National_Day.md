@@ -48,7 +48,7 @@ description: 旅行计划
   | 中天门 | 6：00——18：00 |
   | 桃花源 | 6：00——17：00 |
   | 后石坞 | 8：00——16：00 |
-  
+
 - [x] 保存救援电话：0538-96008888  
   
 ---
@@ -70,7 +70,7 @@ description: 旅行计划
 
 <!-- 轮播写在这里 -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
   /* 轮播图专属样式 */
   .taishan-carousel {
@@ -165,7 +165,7 @@ description: 旅行计划
 
 <div class="taishan-carousel">
   <div class="taishan-slides">
-    <!-- 轮播图内容 -->
+
     <div class="taishan-slide">
       <img src="https://zcyyy.github.io/assets/images/cloud.jpg" class="taishan-rotate" alt="尧观顶云海">
       <div class="taishan-caption">图一：尧观顶 (玉皇顶西侧)：绝佳观云海地点！视野开阔，人相对少</div>
@@ -243,58 +243,16 @@ description: 旅行计划
     if (e.key === 'ArrowLeft') prevSlide();
     if (e.key === 'ArrowRight') nextSlide();
   });
-</script>
+</script> -->
 
-<!-- <style>
-  .image-item {
-    width: 300px; /* 固定宽度 */
-    margin: 20px;
-    text-align: center;
-    display: inline-block;
-  }
-  .image-item img {
-    width: auto; /* 宽度自适应容器 */
-    height: 100%; /* 高度保持比例 */
-    object-fit: cover; /* 保持比例填充容器 */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  .image-title {
-    font-weight: bold;
-    margin-top: 8px;
-  }
-  .rotate-first {
-    transform: rotate(-90deg);
-    transform-origin: center;
-  }
-</style>
+| 景观                                                    | 图片                                                                                                                                                      |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 尧观顶 (玉皇顶西侧)：绝佳观云海地点！视野开阔，人相对少 | <img src="https://zcyyy.github.io/assets/images/cloud.jpg" width="30%" />                                                                                 |
+| 玉皇顶：泰山极顶，标志性打卡地                          | <img src="https://zcyyy.github.io/assets/images/temple.jpg" width="30%" />                                                                                |
+| 日落：若天气好且时间充裕，在山顶看日落非常美            | <img src="https://zcyyy.github.io/assets/images/sun.jpg" width="30%" />                                                                                   |
+| 岱庙宋天贶殿壁画                                        | <img src="https://zcyyy.github.io/assets/images/picture1.jpg" width="30%" /> <img src="https://zcyyy.github.io/assets/images/picture2.jpg" width="30%" /> |
 
-<div class="image-container">
-  <div class="image-item">
-    <img src="https://zcyyy.github.io/assets/images/cloud.jpg" alt="​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。">
-    <div class="image-title">图一：​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。</div>
-  </div>
 
-  <div class="image-item">
-    <img src="https://zcyyy.github.io/assets/images/temple.jpg" alt="泰山玉皇顶">
-    <div class="image-title">图二：​玉皇顶：​​ 泰山极顶，标志性打卡地。</div>
-  </div>
-
-  <div class="image-item">
-    <img src="https://zcyyy.github.io/assets/images/sun.jpg" alt="泰山日落">
-    <div class="image-title">图三：​日落：​​ 若天气好且时间充裕，在山顶看日落非常壮美。</div>
-  </div>
-
-  <div class="image-item">
-    <img src="https://zcyyy.github.io/assets/images/picture1.jpg" alt="泰山风景">
-    <div class="image-title"></div>
-  </div>
-
-  <div class="image-item">
-    <img src="https://zcyyy.github.io/assets/images/picture2.jpg" alt="岱庙壁画">
-    <div class="image-title">图四：岱庙宋天贶殿壁画</div>
-  </div>
-</div> -->
 ## 三 美食
 - 糁（san）汤
 - 三东炒鸡（推荐：山东炒鸡，黄瓜拌油条？，风味茄子等）
