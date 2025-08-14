@@ -63,7 +63,185 @@ description: 旅行计划
 - 天文通看天气预报
 
 **观景精华**
+
+<!-- 轮播写在这里 -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
+  /* 轮播图专属样式 */
+  .taishan-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .taishan-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 450px;
+  }
+  
+  .taishan-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .taishan-slide img {
+    max-width: 85%;
+    max-height: 70%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .taishan-caption {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 30px;
+    max-width: 80%;
+  }
+  
+  .taishan-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .taishan-btn {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .taishan-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .taishan-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #bdc3c7;
+    cursor: pointer;
+  }
+  
+  .taishan-dot.active {
+    background: #3498db;
+  }
+  
+  /* 第一张图片旋转 */
+  .taishan-rotate {
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+</style>
+
+<div class="taishan-carousel">
+  <div class="taishan-slides">
+    <!-- 轮播图内容 -->
+    <div class="taishan-slide">
+      <img src="https://zcyyy.github.io/assets/images/cloud.jpg" class="taishan-rotate" alt="尧观顶云海">
+      <div class="taishan-caption">图一：尧观顶 (玉皇顶西侧)：绝佳观云海地点！视野开阔，人相对少</div>
+    </div>
+    
+    <div class="taishan-slide">
+      <img src="https://zcyyy.github.io/assets/images/temple.jpg" alt="玉皇顶">
+      <div class="taishan-caption">图二：玉皇顶：泰山极顶，标志性打卡地</div>
+    </div>
+    
+    <div class="taishan-slide">
+      <img src="https://zcyyy.github.io/assets/images/sun.jpg" alt="泰山日落">
+      <div class="taishan-caption">图三：日落：若天气好且时间充裕，在山顶看日落非常壮美</div>
+    </div>
+    
+    <div class="taishan-slide">
+      <img src="https://zcyyy.github.io/assets/images/picture2.jpg" alt="岱庙壁画">
+      <div class="taishan-caption">图四：岱庙宋天贶殿壁画：镇馆之宝，中国古代壁画杰作</div>
+    </div>
+  </div>
+  
+  <div class="taishan-dots">
+    <span class="taishan-dot active" data-index="0"></span>
+    <span class="taishan-dot" data-index="1"></span>
+    <span class="taishan-dot" data-index="2"></span>
+    <span class="taishan-dot" data-index="3"></span>
+    <span class="taishan-dot" data-index="4"></span>
+  </div>
+  
+  <div class="taishan-controls">
+    <button class="taishan-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i> 上一张</button>
+    <button class="taishan-btn" onclick="nextSlide()">下一张 <i class="fas fa-chevron-right"></i></button>
+  </div>
+</div>
+
+<script>
+  // 轮播图控制脚本
+  let currentSlide = 0;
+  const slides = document.querySelector('.taishan-slides');
+  const totalSlides = document.querySelectorAll('.taishan-slide').length;
+  const dots = document.querySelectorAll('.taishan-dot');
+  
+  function updateSlide() {
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // 更新指示点
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlide();
+  }
+  
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  }
+  
+  // 自动轮播
+  setInterval(nextSlide, 5000);
+  
+  // 添加指示点点击事件
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentSlide = parseInt(dot.getAttribute('data-index'));
+      updateSlide();
+    });
+  });
+  
+  // 添加键盘控制
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+  });
+</script>
+
+<!-- <style>
   .image-item {
     width: 300px; /* 固定宽度 */
     margin: 20px;
@@ -112,7 +290,7 @@ description: 旅行计划
     <img src="https://zcyyy.github.io/assets/images/picture2.jpg" alt="岱庙壁画">
     <div class="image-title">图四：岱庙宋天贶殿壁画</div>
   </div>
-</div>
+</div> -->
 ## 美食
 - 糁（san）汤
 - 三东炒鸡（推荐：山东炒鸡，黄瓜拌油条？，风味茄子等）
