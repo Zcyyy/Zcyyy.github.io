@@ -54,7 +54,8 @@ description: 旅行计划
 ---
 
 ## 二 路线
-![路线示意图](https://zcyyy.github.io/assets/images/route.jpg)  
+<img src="https://zcyyy.github.io/assets/images/route.jpg" width="30%" /> 
+
 ### 2.1上山:
 - 路线1：红门游客中心->中天门->十八盘->南天门->玉皇顶（全程徒步）
   耗时：6小时（建议预留4-6小时）
