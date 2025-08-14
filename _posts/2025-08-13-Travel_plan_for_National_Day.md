@@ -63,10 +63,10 @@ description: 旅行计划
 - 天文通看天气预报
 
 **观景精华**
-- ​​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。
-- ​玉皇顶：​​ 泰山极顶，标志性打卡地。
-- ​日落：​​ 若天气好且时间充裕，在山顶看日落非常壮美。
-- ​岱庙宋天贶殿壁画：​​ 镇馆之宝，中国古代壁画杰作！
+- ​![​尧观顶 (玉皇顶西侧)：​​ 绝佳观云海地点！视野开阔，人相对少。](https://zcyyy.github.io/assets/images/cloud.jpg)
+- ![​玉皇顶：​​ 泰山极顶，标志性打卡地。](https://zcyyy.github.io/assets/images/temple.jpg)
+- ![​日落：​​ 若天气好且时间充裕，在山顶看日落非常壮美。](https://zcyyy.github.io/assets/images/sun.jpg)
+- ![​岱庙宋天贶殿壁画：​​ 镇馆之宝，中国古代壁画杰作！](https://zcyyy.github.io/assets/images/picture1.jpg) ![​](https://zcyyy.github.io/assets/images/picture2.jpg)
 
 ## 美食
 - 糁（san）汤
